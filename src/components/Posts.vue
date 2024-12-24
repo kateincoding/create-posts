@@ -46,9 +46,9 @@
           title: "",
           content: "",
           author: "",
-        }
+        },
+        editIndex: null,
       };
-      
     },
     methods: {
       cleanForm(){
