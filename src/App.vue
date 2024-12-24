@@ -1,47 +1,56 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
+import Posts from './components/Posts.vue';
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-    </div>
-  </header>
-
-  <main>
-    <TheWelcome />
+  <main class="app-container">
+    <header class="app-header">
+      <h1 class="header-title">My Blog Application</h1>
+    </header>
+    <section class="posts-section">
+      <Posts />
+    </section>
   </main>
 </template>
 
 <style scoped>
-header {
-  line-height: 1.5;
+/* Main application container */
+.app-container {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+  padding: 2rem;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
 }
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
+/* Header styling */
+.app-header {
+  background-color: #007bff;
+  color: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 2rem;
 }
 
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
+.header-title {
+  font-size: 2rem;
+  margin: 0;
+}
 
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
+/* Section styling for Posts */
+.posts-section {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  max-width: 800px;
 }
 </style>
